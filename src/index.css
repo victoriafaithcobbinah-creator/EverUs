@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --everus-bg: #fff6f9;
+    --everus-surface: rgba(255, 255, 255, 0.86);
+    --everus-surface-elevated: #ffffff;
+    --everus-text: #2a1420;
+    --everus-muted: #7e576c;
+    --everus-border: rgba(236, 72, 153, 0.14);
+    --everus-accent: #ec4899;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  .dark {
+    --everus-bg: #170d16;
+    --everus-surface: rgba(36, 19, 34, 0.88);
+    --everus-surface-elevated: #281526;
+    --everus-text: #fdf2f8;
+    --everus-muted: #c9a4b8;
+    --everus-border: rgba(244, 114, 182, 0.18);
+    --everus-accent: #f472b6;
+  }
+
+  html,
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--everus-bg);
+    color: var(--everus-text);
+    overflow-x: hidden;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.pb-safe {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+.pt-safe {
+  padding-top: max(0.5rem, env(safe-area-inset-top));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

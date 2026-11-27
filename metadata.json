@@ -1,0 +1,6 @@
+{
+  "name": "EverUs",
+  "description": "Two lives. One shared journey. A private couples space for encrypted messaging, shared memories, daily tasks, plans, special dates, games, and lock-screen wallpapers.",
+  "requestFramePermissions": ["geolocation", "camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
